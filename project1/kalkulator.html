@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            button {
+                width: 100%;
+                border-radius: 4px;
+            }
+            .clear {
+                background-color: rgb(220, 20, 20);
+                color: aliceblue;
+            }
+            .operator {
+                background-color: yellowgreen;
+                color: black;
+            }
+        </style>
+        <body>
+            <table>
+                <tr>
+                    <th colspan="4"><input type="text" id="display" disabled></th>
+                </tr>
+                <tr>
+                    <td colspan="2"><button class="clear" onclick="clearDisplay()">ac</button></td>
+                    <td><button class="backspace" onclick="backspace()">c</button></td>
+                    <td><button class="operator" onclick="appendToDisplay('*')">*</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="appendToDisplay('7')">7</button></td>
+                    <td><button onclick="appendToDisplay('8')">8</button></td>
+                    <td><button onclick="appendToDisplay('9')">9</button></td>
+                    <td><button class="operator" onclick="appendToDisplay('/')">/</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="appendToDisplay('4')">4</button></td>
+                    <td><button onclick="appendToDisplay('5')">5</button></td>
+                    <td><button onclick="appendToDisplay('6')">6</button></td>
+                    <td><button class="operator" onclick="appendToDisplay('-')">-</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="appendToDisplay('1')">1</button></td>
+                    <td><button onclick="appendToDisplay('2')">2</button></td>
+                    <td><button onclick="appendToDisplay('3')">3</button></td>
+                    <td><button class="operator" onclick="appendToDisplay('+')">+</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="appendToDisplay('-+')">-+</button></td>
+                    <td><button onclick="appendToDisplay('0')">0</button></td>
+                    <td><button onclick="appendToDisplay('.')">.</button></td>
+                    <td><button class="equal" onclick="calculate('')">=</button></td>
+                </tr>
+            </table>
+            <script>
+                function appendToDisplay(value) {
+                    document.getElementById('display').value += value;
+                }
+
+                function calculate() {
+                    try{
+                        document.getElementById('display').value = eval(document.getElementById('display').value);
+                    }catch{
+                        document.getElementById('display').value = 'Error'
+                    }
+                }
+                function clearDisplay() {
+                    document.getElementById('display').value = '';
+                }
+                function backspace() {
+                    var curentDisplay = document.getElementById('display').value;
+                    document.getElementById('display').value = curentDisplay.slice(0, -1);
+                }
+            </script>
+        </body>
+    </head>
