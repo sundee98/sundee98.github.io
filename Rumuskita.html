@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RumusKita</title>
+   <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header> 
+        <div class="navigation-bar"> 
+        <H2  id="logo">RumusKita.com</H2>
+        <input class="search-box" type="text" placeholder="cari rumus">
+            <button type="submite">Search</button>
+       <nav>
+        <ul>
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <label class="language-selector" for="language"></label>
+        <select id="language" onchange="changeLanguage()">
+          <option value="id">Bahasa Indonesia</option>
+          <option value="en">English</option>
+          <option value="kr">Korea</option>
+          <option value="jp">Japan</option>
+          <option value="jw">Jawa</option>
+        </select>
+       </nav>
+        </div>
+ </header>
+ <nav class="float-left">
+    <p> Bangun Datar</p>
+    <ul class="glosarium">
+        <li>Segitiga</li>
+        <li>Persegi</li>
+        <li>Lingkaran</li>
+        <li>Balok</li>
+        <li>Trapesium</li>
+        <li>Jajargenjang</li>
+    </ul>
+</nav>
+ <section>
+    <h2 style="clear:right">LUAS SEGITIGA</h2>
+    <p>Hitung Luas Dengan Kalkulator matematika :</p>
+    <div class="clearfix">
+        
+    <img class="img1" src="css/luas-segitiga.jpg" alt="segitiga" width="420" height="360">
+    <form>
+        <input type="text" name="number" id="PanjangAlas" placeholder="Nilai Alas (cm)">
+        <br>
+        <input type="text" name="number" id="PanjangAlas" placeholder="Nilai Tinggi (cm)"> 
+        <button class="button" onclick="" id="calculate">Hitung</button>
+    </form>
+    </div>
+ </section>
+ <aside>
+    <h3></h3>
+ </aside>
+  
+</body>
+</html>
